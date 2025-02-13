@@ -8,9 +8,13 @@ push the code to your branch
 
 ask merger(chirag/darshil) to merge your branch changes with the main branch
 
-git clone https://github.com/chiragtyagi86/placement.dmifotech.com.git
-OR 
+now INSHORT FETCH CODE FROM MAIN and merge it to your branch
+
+git fetch origin
+git checkout main(optional)
 git pull origin main
+git checkout darshil (optional)
+git merge main
 
 then,
 
