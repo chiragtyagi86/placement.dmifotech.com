@@ -118,7 +118,7 @@ router.post("/sign-up", (req, res) => {
   
         // Generate JWT token using the user object
         const token = jwt.sign(
-          { id: user.id, email: user.email, role: user.role },
+          { id: user.emp_id, email: user.emp_email, role: user.role },
           process.env.JWT_SECRET,
           { expiresIn: "1h" }
         );
@@ -132,6 +132,8 @@ router.post("/sign-up", (req, res) => {
   });
   router.get("/dashboard", authenticateToken, (req, res) => {
     const email = req.user.email;
+
+    
     const sql = "SELECT * FROM employee WHERE emp_email = ?";
   
     db.query(sql, [email], (err, result) => {
