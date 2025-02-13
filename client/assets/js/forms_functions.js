@@ -1,27 +1,34 @@
-document.getElementById("login-form").addEventListener("submit", function(event) {
+document
+  .getElementById("login-form")
+  .addEventListener("submit", async function (event) {
     event.preventDefault();
-    const formData = new FormData(event.target);
     const formObj = {};
-    formData.forEach((value, key) => formObj[key] = value);
+    const formData = new FormData(event.target);
+    formData.forEach((value, key) => {
+      formObj[key] = value;
+    });
 
-    // Send the form data to the server
-    // to this
-    fetch('http://localhost:3000/sign-in', {
-        method: 'POST',
+    try {
+      const response = await fetch("http://localhost:3000/sign-in", {
+        method: "POST",
         headers: {
-            'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(formObj)
-    })
-   .then(response => response.json())
-   .then(data => {
-    // Handle the response from the server
-    if (data.success) {
-        alert("hello")
-    } else {
+        body: JSON.stringify(formObj),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        console.log("Login successful:", data);
+        localStorage.setItem("token", data.token);
         window.location.href = "resume.html";
-        // Display an error message
-        console.log(data.message);
+      } else {
+        alert(data.error || "Login failed");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred during login");
     }
-});
-})
+  });
+const token = localStorage.getItem("token");
