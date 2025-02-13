@@ -1,29 +1,26 @@
-Shortcuts for pushing the code to the main branch
+# placement.dmifotech.com
+
+The placement website is a dynamic platform connecting job seekers with employers while being managed by an admin.  
+
+- **Admin**: Oversees the platform, manages users, job postings, and ensures smooth operations.  
+- **Job Seeker**: Creates a profile, uploads resumes, searches, and applies for jobs.  
+- **Employer**: Posts job listings, reviews applications, and hires candidates.  
+
+It streamlines the hiring process, making job searching and recruitment efficient and seamless. 🚀
 
 
-first clone the branch 
-and switch the branch to your branch(darshil/chirag/dhruv)
-make the changes
-push the code to your branch
+## Authors
 
-ask merger(chirag/darshil) to merge your branch changes with the main branch
-
-now INSHORT FETCH CODE FROM MAIN and merge it to your branch
-
-git fetch origin
-git checkout main(optional)
-git pull origin main
-git checkout darshil (optional)
-git merge main
-
-then,
-
-git switch branch -C (darshil/chirag/dhruv)
-git add .
-git commit -m "made change"
-git push origin (darshil/chirag/dhruv)
+- [@chiragtyagi86](https://www.github.com/chiragtyagi86)
+- [@Not-Darshil](https://www.github.com/Not-Darshil)
+- [@dhruv](https://www.github.com/dhruvsrivastavaa)
 
 
-dhruv added a line
+
+## Used By
+
+This project is used by the following companies:
+
+- [@dmifotech](https://dmifotech.com)
 
 
