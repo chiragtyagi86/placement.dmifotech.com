@@ -143,7 +143,7 @@
               <h3>
                 Login
               </h3>
-              <form class="login-form">
+              <form class="login-form" id="login-form">
                 <div class="form-group">
                   <div class="input-icon">
                     <i class="lni-user"></i>
@@ -153,11 +153,11 @@
                 <div class="form-group">
                   <div class="input-icon">
                     <i class="lni-lock"></i>
-                    <input type="password" class="form-control" placeholder="Password">
+                    <input type="password" name="password" class="form-control" placeholder="Password">
                   </div>
                 </div> 
                 <div class="form-group form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <input type="checkbox" name="remember_me" class="form-check-input" id="exampleCheck1">
                   <label class="form-check-label" for="exampleCheck1">Keep Me Signed In</label>
                 </div>
                 <button class="btn btn-common log-btn">Submit</button>
@@ -255,7 +255,10 @@
     <!-- End Preloader -->
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/js/tether.min.js" integrity="sha384-rE+7wSd/B6eRvfqbbj/x8S9J7+x9m9ZfA6x9b1rRibC7i7j6fak=" crossorigin="anonymous"></script> -->
+     
     <script src="assets/js/jquery-min.js"></script>
+    <script src="assets/js/forms_functions.js" ></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/color-switcher.js"></script>
