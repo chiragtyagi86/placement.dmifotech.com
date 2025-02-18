@@ -1,11 +1,10 @@
 async function checkAuth() {
     const token = localStorage.getItem("token");
-
+  
     if (!token) {
       window.location.href = "/login.html";
       return;
     }
-
     try {
       const response = await fetch("http://localhost:3000/dashboard", {
         method: "GET",
@@ -14,7 +13,7 @@ async function checkAuth() {
         },
       });
 
-      if (response.status === 401 || response.status === 403) {
+      if (response.status === 401 || response.status === 403) { 
         window.location.href = "/login.html";
       } else if (!response.ok) {
         console.error("Error:", await response.text());
